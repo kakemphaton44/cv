@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/fonts/fonts.css"><title>Kakemphaton - Tableau de bord - Olivier Guitton, Product Manager</title><meta name="description" content="Tableau de bord Kakemphaton : KPIs produit, satisfaction, revenus, churn et suivi d'impact."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.olivierguitton.com/kakemphaton-tableau-de-bord.html"><meta property="og:type" content="website"><meta property="og:url" content="https://www.olivierguitton.com/kakemphaton-tableau-de-bord.html"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="Olivier Guitton"><meta property="og:title" content="Kakemphaton - Tableau de bord - Olivier Guitton, Product Manager"><meta property="og:description" content="Tableau de bord Kakemphaton : KPIs produit, satisfaction, revenus, churn et suivi d'impact."><meta property="og:image" content="https://www.olivierguitton.com/assets/thumb-dashboard.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kakemphaton - Tableau de bord - Olivier Guitton, Product Manager"><meta name="twitter:description" content="Tableau de bord Kakemphaton : KPIs produit, satisfaction, revenus, churn et suivi d'impact."><meta name="twitter:image" content="https://www.olivierguitton.com/assets/thumb-dashboard.png"><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%232563eb'/%3E%3Cpath%20d='M4%2017h4l2.6-7.5%204%2015%202.8-9.5%201.7%204H28'%20fill='none'%20stroke='%23fff'%20stroke-width='2.3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E"><script>
+(function(){if(window.__kbnav)return;window.__kbnav=1;document.addEventListener("keydown",function(e){if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;var t=((e.target&&e.target.tagName)||"").toLowerCase();if(t==="input"||t==="textarea"||t==="select"||(e.target&&e.target.isContentEditable))return;var nav=document.querySelector("[data-knav]");if(!nav)return;var p=null,n=null;nav.querySelectorAll("a").forEach(function(a){var x=(a.textContent||"").trim();if(x==="‹")p=a;if(x==="›")n=a;});var g=e.key==="ArrowLeft"?p:n;if(g){var h=g.getAttribute("href");if(h)location.href=h;}});})();
+</script><style>
+@media print {
+  @page { margin: 0.5cm; }
+  section, article, figure, table { break-inside: avoid; }
+  *, ::before, ::after { print-color-adjust: exact; backdrop-filter: none !important; animation-delay: -99s !important; animation-duration: 0.001s !important; animation-iteration-count: 1 !important; animation-fill-mode: both !important; animation-play-state: running !important; transition-duration: 0s !important; }
+}
+.scp0:hover { transform: translateY(-2px); box-shadow: rgba(16, 30, 60, 0.04) 0px 1px 2px, rgba(16, 30, 60, 0.24) 0px 22px 40px -26px; }
+.scp1:hover { transform: translateY(-2px); box-shadow: rgba(16, 30, 60, 0.04) 0px 1px 2px, rgba(79, 70, 229, 0.28) 0px 22px 40px -26px; }
+.scp2:hover { transform: translateY(-2px); box-shadow: rgba(16, 30, 60, 0.04) 0px 1px 2px, rgba(16, 30, 60, 0.24) 0px 18px 34px -22px; }
+.scp3:hover { transform: translateY(-2px); box-shadow: rgba(16, 30, 60, 0.04) 0px 1px 2px, rgba(16, 30, 60, 0.24) 0px 20px 38px -24px; }
+* { box-sizing: border-box; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: rgb(37, 99, 235) solid 3px; outline-offset: 2px; border-radius: 4px; }
+body { margin: 0px; background: rgb(244, 245, 249); }
+@media (max-width: 820px) {
+  [style*="padding:54px 40px 76px"] { padding: 26px 15px 48px !important; }
+  [style*="padding:54px 44px 76px"] { padding: 26px 15px 48px !important; }
+  h1 { font-size: 26px !important; line-height: 1.15 !important; }
+  [data-knav] { position: static !important; }
+  [style*="grid-template-columns:218px 1fr 392px"], [style*="grid-template-columns:252px 1fr"], [style*="grid-template-columns:208px 1fr"], [style*="grid-template-columns:1fr 1fr"], [style*="grid-template-columns:1fr 1.2fr"], [style*="grid-template-columns:1.6fr 1fr"], [style*="grid-template-columns:repeat(2,1fr)"], [style*="grid-template-columns:repeat(3,1fr)"], [style*="grid-template-columns:repeat(4,1fr)"], [style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns: 1fr !important; }
+}</style></head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="kakemphaton-tableau-de-bord"><div style="background: radial-gradient(1200px 680px at 88% -12%, rgb(233, 237, 251) 0%, rgb(241, 243, 249) 48%, rgb(244, 245, 249) 78%); min-height: 100vh; padding: 54px 40px 76px; font-family: &quot;Hanken Grotesk&quot;, sans-serif; -webkit-font-smoothing: antialiased; color: rgb(15, 23, 42);">
+  <div data-screen-label="Tableau de bord" style="max-width: 1660px; margin: 0px auto;">
+
+    <div data-knav="1" style="position: sticky; top: 14px; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(18, 32, 84, 0.08); border-radius: 14px; padding: 10px 14px; margin-bottom: 26px; box-shadow: rgba(16, 30, 60, 0.22) 0px 8px 24px -14px;">
+    <div style="display: flex; align-items: center; gap: 12px; min-width: 0px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 9px; text-decoration: none;">
+        <span style="width: 30px; height: 30px; border-radius: 9px; background: rgb(37, 99, 235); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg viewBox="0 0 24 24" width="17" height="17" fill="none"><path d="M3 13h3l2-6 3 12 2.5-8 1.8 4H21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        <span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: rgb(15, 23, 42);">Kakemphaton</span>
+      </a>
+      <span style="color: rgb(203, 213, 225); font-size: 14px;">/</span>
+        <a href="kakemphaton-etude-de-cas.html" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 14px; font-weight: 600; color: rgb(37, 99, 235); text-decoration: none; white-space: nowrap;">Vue d'ensemble</a>
+        <span style="color: rgb(203, 213, 225); font-size: 14px;">/</span>
+      <span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 14px; font-weight: 600; color: rgb(100, 116, 139); white-space: nowrap;">Tableau de bord</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <a href="index.html" style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 600; color: rgb(37, 99, 235); text-decoration: none; padding: 8px 14px; border-radius: 9px; border: 1px solid rgb(214, 224, 245); background: rgb(255, 255, 255); white-space: nowrap;">← Retour au CV</a>
+      <div style="display: flex; align-items: center; gap: 5px; background: rgb(244, 246, 252); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 9px; padding: 3px;">
+        <a href="kakemphaton-scrum-kanban.html" title="Sprint board" style="display: flex; align-items: center; justify-content: center; width: 30px; height: 28px; border-radius: 7px; background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.08); color: rgb(37, 99, 235); text-decoration: none; font-size: 16px; font-weight: 700;">‹</a>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 600; color: rgb(100, 116, 139); padding: 0px 6px; white-space: nowrap;">10 / 11</span>
+        <a href="kakemphaton-app-refonte.html" title="Refonte de l'application" style="display: flex; align-items: center; justify-content: center; width: 30px; height: 28px; border-radius: 7px; background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.08); color: rgb(37, 99, 235); text-decoration: none; font-size: 16px; font-weight: 700;">›</a>
+      </div>
+    </div>
+  </div>
+
+    
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 26px; flex-wrap: wrap;">
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.08); color: rgb(37, 99, 235); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 7px 13px; border-radius: 999px; margin-bottom: 18px; box-shadow: rgba(16, 30, 60, 0.04) 0px 1px 2px;">Tableau de bord · produit fictif</div>
+        <h1 style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 800; font-size: 36px; letter-spacing: -0.025em; line-height: 1.05; margin: 0px;">Pilotage produit &amp; business</h1>
+        <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 500; font-size: 18px; letter-spacing: -0.01em; color: rgb(100, 116, 139); margin-top: 6px;">Finances, satisfaction et performance — d'un semestre à l'autre.</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px; background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 16px; padding: 16px 22px; box-shadow: rgba(16, 30, 60, 0.04) 0px 1px 2px, rgba(16, 30, 60, 0.12) 0px 14px 30px -22px;">
+        <span style="width: 42px; height: 42px; border-radius: 12px; background: rgb(241, 235, 254); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 15h3l2.5-7 3.5 11 2.4-6 1.5 3H21" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        <div>
+          <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(107, 118, 137); margin-bottom: 5px; white-space: nowrap;">CA consolidé · 12 mois glissants</div>
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: rgb(109, 40, 217); line-height: 1;">37 M€</span>
+            <span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 10px; border-radius: 999px;">▲ +7,2 %</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 218px 1fr 392px; gap: 18px; align-items: start;">
+
+      
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+
+        <div class="scp0" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 16px; overflow: hidden; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.16) 0px 16px 32px -26px; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="height: 3px; background: linear-gradient(90deg, rgb(124, 58, 237), rgb(167, 139, 250));"></div>
+          <div style="padding: 16px 16px 14px;">
+            <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 11px;">
+              <span style="width: 28px; height: 28px; border-radius: 9px; background: rgb(241, 235, 254); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none"><circle cx="12" cy="12" r="3" stroke="#7c3aed" stroke-width="2"></circle><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"></path></svg></span>
+              <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(124, 58, 237); flex: 1 1 0%;">Vision produit</div>
+              <span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(147, 51, 234); background: rgb(246, 239, 254); padding: 3px 7px; border-radius: 6px;">Long terme</span>
+            </div>
+            <div style="font-size: 12px; color: rgb(71, 85, 105); line-height: 1.55;">Garantir que chaque enfant, avant même sa naissance, puisse bénéficier des meilleurs diagnostics et traitements pour les cardiopathies congénitales — grâce à l'IA et à une accessibilité mondiale.</div>
+            <div style="margin-top: 13px; padding-top: 11px; border-top: 1px solid rgba(18, 32, 84, 0.07);">
+              <span style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(100, 116, 139); background: rgb(245, 246, 251); border: 1px solid rgba(18, 32, 84, 0.06); padding: 4px 9px; border-radius: 7px;"><svg viewBox="0 0 24 24" width="11" height="11" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#94a3b8" stroke-width="2"></rect><path d="M3 9h18M8 3v4M16 3v4" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"></path></svg>Échéance · 31/12/2036</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scp0" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 16px; overflow: hidden; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.16) 0px 16px 32px -26px; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="height: 3px; background: linear-gradient(90deg, rgb(37, 99, 235), rgb(96, 165, 250));"></div>
+          <div style="padding: 16px 16px 14px;">
+            <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 11px;">
+              <span style="width: 28px; height: 28px; border-radius: 9px; background: rgb(232, 240, 254); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none"><path d="M5 21V4l13 .5-3 4 3 4-13-.5" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"></path></svg></span>
+              <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(37, 99, 235); flex: 1 1 0%;">Product goal</div>
+              <span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(37, 99, 235); background: rgb(234, 241, 254); padding: 3px 7px; border-radius: 6px;">Moyen terme</span>
+            </div>
+            <div style="font-size: 12px; color: rgb(71, 85, 105); line-height: 1.55;">Augmenter la base utilisateurs de 30 % en améliorant l'interface pour une navigation plus intuitive.</div>
+            <div style="margin-top: 13px; padding-top: 11px; border-top: 1px solid rgba(18, 32, 84, 0.07);">
+              <span style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(100, 116, 139); background: rgb(245, 246, 251); border: 1px solid rgba(18, 32, 84, 0.06); padding: 4px 9px; border-radius: 7px;"><svg viewBox="0 0 24 24" width="11" height="11" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#94a3b8" stroke-width="2"></rect><path d="M3 9h18M8 3v4M16 3v4" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"></path></svg>Échéance · 31/12/2029</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scp1" style="background: rgb(247, 248, 255); border: 1px solid rgb(219, 225, 255); border-radius: 16px; overflow: hidden; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(79, 70, 229, 0.2) 0px 16px 32px -26px; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="height: 3px; background: linear-gradient(90deg, rgb(79, 70, 229), rgb(129, 140, 248));"></div>
+          <div style="padding: 16px 16px 14px;">
+            <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 11px;">
+              <span style="width: 28px; height: 28px; border-radius: 9px; background: rgb(230, 232, 255); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" fill="#4f46e5"></path></svg></span>
+              <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(79, 70, 229); flex: 1 1 0%;">Sprint goal · 18e</div>
+              <span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(79, 70, 229); background: rgb(230, 232, 255); padding: 3px 7px; border-radius: 6px;">Sprint</span>
+            </div>
+            <div style="font-size: 12px; color: rgb(55, 48, 163); line-height: 1.55;">Émettre une alerte automatique et visuelle en cas de qualité d'image trop basse, pour garder une fiabilité élevée des diagnostics.</div>
+            <div style="margin-top: 13px; padding-top: 11px; border-top: 1px solid rgb(219, 225, 255);">
+              <span style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(79, 70, 229); background: rgb(238, 240, 255); border: 1px solid rgb(219, 225, 255); padding: 4px 9px; border-radius: 7px;"><svg viewBox="0 0 24 24" width="11" height="11" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#818cf8" stroke-width="2"></rect><path d="M3 9h18M8 3v4M16 3v4" stroke="#818cf8" stroke-width="2" stroke-linecap="round"></path></svg>Échéance · 31/06/2029</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+
+        <div>
+          <h2 style="display: flex; align-items: center; gap: 10px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.015em; margin: 0px 0px 14px;"><span style="width: 4px; height: 19px; border-radius: 2px; background: rgb(37, 99, 235);"></span>Finances &amp; revenus</h2>
+          <div style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 16px; padding: 24px 26px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.12) 0px 14px 30px -22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
+              <div>
+                <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 15px; font-weight: 700; color: rgb(15, 23, 42);">Revenu récurrent mensuel</div>
+                <div style="font-size: 12.5px; color: rgb(107, 118, 137); margin-top: 3px;">Variation entre le S1 2028 et 2029</div>
+              </div>
+              <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(217, 119, 6); background: rgb(253, 242, 227); padding: 5px 10px; border-radius: 7px;">⚠ Alerte</span>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: stretch;">
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">2,8 M€</span></div>
+                  <div style="position: relative; width: 100%; height: 206px; margin-top: 8px;">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 30px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 100px; height: 1px; background: rgba(18, 32, 84, 0.16);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 170px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    
+                    
+                      <div style="position: absolute; left: 26%; right: 26%; top: 101px; height: 10px; background: linear-gradient(rgb(251, 113, 133), rgb(225, 29, 72)); border-radius: 0px 0px 5px 5px;"></div>
+                      <div style="position: absolute; left: 0px; right: 0px; top: 116px; text-align: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 11px; font-weight: 700; color: rgb(225, 29, 72); white-space: nowrap;"><span class="sc-interp">−100 K€</span></div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Janvier</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">2,5 M€</span></div>
+                  <div style="position: relative; width: 100%; height: 206px; margin-top: 8px;">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 30px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 100px; height: 1px; background: rgba(18, 32, 84, 0.16);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 170px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    
+                      <div style="position: absolute; left: 26%; right: 26%; bottom: 106px; height: 22px; background: linear-gradient(rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 5px 5px 0px 0px;"></div>
+                      <div style="position: absolute; left: 0px; right: 0px; bottom: 127px; text-align: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 11px; font-weight: 700; color: rgb(37, 99, 235); white-space: nowrap;"><span class="sc-interp">+500 K€</span></div>
+                    
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Février</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">2,9 M€</span></div>
+                  <div style="position: relative; width: 100%; height: 206px; margin-top: 8px;">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 30px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 100px; height: 1px; background: rgba(18, 32, 84, 0.16);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 170px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    
+                    
+                      <div style="position: absolute; left: 26%; right: 26%; top: 101px; height: 10px; background: linear-gradient(rgb(251, 113, 133), rgb(225, 29, 72)); border-radius: 0px 0px 5px 5px;"></div>
+                      <div style="position: absolute; left: 0px; right: 0px; top: 116px; text-align: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 11px; font-weight: 700; color: rgb(225, 29, 72); white-space: nowrap;"><span class="sc-interp">−220 K€</span></div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Mars</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">2,4 M€</span></div>
+                  <div style="position: relative; width: 100%; height: 206px; margin-top: 8px;">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 30px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 100px; height: 1px; background: rgba(18, 32, 84, 0.16);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 170px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    
+                    
+                      <div style="position: absolute; left: 26%; right: 26%; top: 101px; height: 15px; background: linear-gradient(rgb(251, 113, 133), rgb(225, 29, 72)); border-radius: 0px 0px 5px 5px;"></div>
+                      <div style="position: absolute; left: 0px; right: 0px; top: 121px; text-align: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 11px; font-weight: 700; color: rgb(225, 29, 72); white-space: nowrap;"><span class="sc-interp">−350 K€</span></div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Avril</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">2,8 M€</span></div>
+                  <div style="position: relative; width: 100%; height: 206px; margin-top: 8px;">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 30px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 100px; height: 1px; background: rgba(18, 32, 84, 0.16);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 170px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    
+                      <div style="position: absolute; left: 26%; right: 26%; bottom: 106px; height: 22px; background: linear-gradient(rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 5px 5px 0px 0px;"></div>
+                      <div style="position: absolute; left: 0px; right: 0px; bottom: 127px; text-align: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 11px; font-weight: 700; color: rgb(37, 99, 235); white-space: nowrap;"><span class="sc-interp">+500 K€</span></div>
+                    
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Mai</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">2,7 M€</span></div>
+                  <div style="position: relative; width: 100%; height: 206px; margin-top: 8px;">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 30px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 100px; height: 1px; background: rgba(18, 32, 84, 0.16);"></div>
+                    <div style="position: absolute; left: 0px; right: 0px; top: 170px; height: 1px; background: rgba(18, 32, 84, 0.05);"></div>
+                    
+                      <div style="position: absolute; left: 26%; right: 26%; bottom: 106px; height: 86px; background: linear-gradient(rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 5px 5px 0px 0px;"></div>
+                      <div style="position: absolute; left: 0px; right: 0px; bottom: 191px; text-align: center; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 11px; font-weight: 700; color: rgb(37, 99, 235); white-space: nowrap;"><span class="sc-interp">+2 000 K€</span></div>
+                    
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Juin</span></div>
+                </div>
+              
+            </div>
+            <div style="display: flex; gap: 24px; margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(18, 32, 84, 0.06);">
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(100, 116, 139);"><span style="width: 14px; height: 8px; border-radius: 3px; background: rgb(37, 99, 235);"></span>Variation positive</span>
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(100, 116, 139);"><span style="width: 14px; height: 8px; border-radius: 3px; background: rgb(225, 29, 72);"></span>Variation négative</span>
+              <span style="font-size: 12px; color: rgb(107, 118, 137); margin-left: auto;">Variation MRR = (mois n) − (mois n-1)</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 style="display: flex; align-items: center; gap: 10px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.015em; margin: 0px 0px 14px;"><span style="width: 4px; height: 19px; border-radius: 2px; background: rgb(22, 163, 74);"></span>Satisfaction &amp; fidélisation</h2>
+          <div style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 16px; padding: 24px 26px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.12) 0px 14px 30px -22px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
+              <div>
+                <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 15px; font-weight: 700; color: rgb(15, 23, 42);">Évolution du nombre de clients</div>
+                <div style="font-size: 12.5px; color: rgb(107, 118, 137); margin-top: 3px;">S1 2029</div>
+              </div>
+              <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(217, 119, 6); background: rgb(253, 242, 227); padding: 5px 10px; border-radius: 7px;">⚠ Alerte</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: stretch;">
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(71, 85, 105); margin-bottom: 8px;"><span class="sc-interp">120</span></div>
+                  <div style="position: relative; width: 100%; height: 170px; border-left: 1px solid rgba(18, 32, 84, 0.07);">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 90px; height: 2px; background: rgba(18, 32, 84, 0.12);"></div>
+                    <div style="position: absolute; left: 20%; right: 20%; bottom: 82px; height: 19px; background: rgb(59, 130, 246); border-radius: 5px 5px 0px 0px; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px;">
+                      <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">+<span class="sc-interp">18</span></span>
+                    </div>
+                    
+                      <div style="position: absolute; left: 20%; right: 20%; top: 92px; height: 19px; background: rgb(239, 68, 68); border-radius: 0px 0px 5px 5px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px;">
+                        <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">−<span class="sc-interp">15</span></span>
+                      </div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Janvier</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(71, 85, 105); margin-bottom: 8px;"><span class="sc-interp">100</span></div>
+                  <div style="position: relative; width: 100%; height: 170px; border-left: 1px solid rgba(18, 32, 84, 0.07);">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 90px; height: 2px; background: rgba(18, 32, 84, 0.12);"></div>
+                    <div style="position: absolute; left: 20%; right: 20%; bottom: 82px; height: 24px; background: rgb(59, 130, 246); border-radius: 5px 5px 0px 0px; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px;">
+                      <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">+<span class="sc-interp">22</span></span>
+                    </div>
+                    
+                      <div style="position: absolute; left: 20%; right: 20%; top: 92px; height: 12px; background: rgb(239, 68, 68); border-radius: 0px 0px 5px 5px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px;">
+                        <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">−<span class="sc-interp">5</span></span>
+                      </div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Février</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(71, 85, 105); margin-bottom: 8px;"><span class="sc-interp">140</span></div>
+                  <div style="position: relative; width: 100%; height: 170px; border-left: 1px solid rgba(18, 32, 84, 0.07);">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 90px; height: 2px; background: rgba(18, 32, 84, 0.12);"></div>
+                    <div style="position: absolute; left: 20%; right: 20%; bottom: 82px; height: 70px; background: rgb(59, 130, 246); border-radius: 5px 5px 0px 0px; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px;">
+                      <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">+<span class="sc-interp">65</span></span>
+                    </div>
+                    
+                      <div style="position: absolute; left: 20%; right: 20%; top: 92px; height: 15px; background: rgb(239, 68, 68); border-radius: 0px 0px 5px 5px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px;">
+                        <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">−<span class="sc-interp">12</span></span>
+                      </div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Mars</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(71, 85, 105); margin-bottom: 8px;"><span class="sc-interp">80</span></div>
+                  <div style="position: relative; width: 100%; height: 170px; border-left: 1px solid rgba(18, 32, 84, 0.07);">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 90px; height: 2px; background: rgba(18, 32, 84, 0.12);"></div>
+                    <div style="position: absolute; left: 20%; right: 20%; bottom: 82px; height: 22px; background: rgb(59, 130, 246); border-radius: 5px 5px 0px 0px; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px;">
+                      <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">+<span class="sc-interp">20</span></span>
+                    </div>
+                    
+                      <div style="position: absolute; left: 20%; right: 20%; top: 92px; height: 45px; background: rgb(239, 68, 68); border-radius: 0px 0px 5px 5px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px;">
+                        <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">−<span class="sc-interp">35</span></span>
+                      </div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Avril</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(71, 85, 105); margin-bottom: 8px;"><span class="sc-interp">120</span></div>
+                  <div style="position: relative; width: 100%; height: 170px; border-left: 1px solid rgba(18, 32, 84, 0.07);">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 90px; height: 2px; background: rgba(18, 32, 84, 0.12);"></div>
+                    <div style="position: absolute; left: 20%; right: 20%; bottom: 82px; height: 16px; background: rgb(59, 130, 246); border-radius: 5px 5px 0px 0px; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px;">
+                      <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">+<span class="sc-interp">15</span></span>
+                    </div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Mai</span></div>
+                </div>
+              
+                <div style="flex: 1 1 0%; display: flex; flex-direction: column; align-items: center;">
+                  <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 13px; font-weight: 700; color: rgb(71, 85, 105); margin-bottom: 8px;"><span class="sc-interp">100</span></div>
+                  <div style="position: relative; width: 100%; height: 170px; border-left: 1px solid rgba(18, 32, 84, 0.07);">
+                    <div style="position: absolute; left: 0px; right: 0px; top: 90px; height: 2px; background: rgba(18, 32, 84, 0.12);"></div>
+                    <div style="position: absolute; left: 20%; right: 20%; bottom: 82px; height: 15px; background: rgb(59, 130, 246); border-radius: 5px 5px 0px 0px; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px;">
+                      <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">+<span class="sc-interp">14</span></span>
+                    </div>
+                    
+                      <div style="position: absolute; left: 20%; right: 20%; top: 92px; height: 13px; background: rgb(239, 68, 68); border-radius: 0px 0px 5px 5px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px;">
+                        <span style="font-size: 10px; font-weight: 600; color: rgb(255, 255, 255);">−<span class="sc-interp">10</span></span>
+                      </div>
+                    
+                  </div>
+                  <div style="font-size: 11.5px; color: rgb(138, 147, 168); margin-top: 8px;"><span class="sc-interp">Juin</span></div>
+                </div>
+              
+            </div>
+            <div style="display: flex; gap: 24px; margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(18, 32, 84, 0.06);">
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(100, 116, 139);"><span style="width: 14px; height: 8px; border-radius: 3px; background: rgb(59, 130, 246);"></span>Nouveaux clients</span>
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(100, 116, 139);"><span style="width: 14px; height: 8px; border-radius: 3px; background: rgb(239, 68, 68);"></span>Clients perdus</span>
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(100, 116, 139);"><span style="width: 14px; height: 8px; border-radius: 3px; background: rgb(203, 213, 225);"></span>Total clients actifs</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px;">
+          <h2 style="display: flex; align-items: center; gap: 10px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.015em; margin: 0px;"><span style="width: 4px; height: 19px; border-radius: 2px; background: rgb(109, 40, 217);"></span>Indicateurs clés</h2>
+          <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(107, 118, 137);">vs semestre n-1</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">CA</span></div>
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+28,8 %</span></span>
+                
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">27,3 M€</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 78%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">21,2 M€</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                      <div style="height: 100%; width: 100%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 4px;"></div>
+                    
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">27,3 M€</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">Moyenne MRR</span></div>
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+28,6 %</span></span>
+                
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">2,7 M€</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 78%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">2,1 M€</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                      <div style="height: 100%; width: 100%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 4px;"></div>
+                    
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">2,7 M€</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">Customer lifetime (t)</span></div>
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+5 mois</span></span>
+                
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">26 mois</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 81%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">21 mois</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                      <div style="height: 100%; width: 100%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 4px;"></div>
+                    
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">26 mois</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">Customer lifetime (€)</span></div>
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+3 000 €</span></span>
+                
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">25 000 €</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 88%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">22 000 €</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                      <div style="height: 100%; width: 100%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 4px;"></div>
+                    
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">25 000 €</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">ARPA</span></div>
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+80 €</span></span>
+                
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">940 €</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 91%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">860 €</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                      <div style="height: 100%; width: 100%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 4px;"></div>
+                    
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">940 €</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">Clients actifs</span></div>
+                
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(220, 38, 38); background: rgb(253, 234, 234); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▼</span></span><span class="sc-interp">−40</span></span>
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">80</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 100%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">120</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                    
+                      <div style="height: 100%; width: 67%; background: linear-gradient(90deg, rgb(251, 113, 133), rgb(225, 29, 72)); border-radius: 4px;"></div>
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">80</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">Clients gagnés</span></div>
+                
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(220, 38, 38); background: rgb(253, 234, 234); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▼</span></span><span class="sc-interp">−27</span></span>
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">96</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 100%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">123</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                    
+                      <div style="height: 100%; width: 78%; background: linear-gradient(90deg, rgb(251, 113, 133), rgb(225, 29, 72)); border-radius: 4px;"></div>
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">96</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">Clients perdus</span></div>
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▼</span></span><span class="sc-interp">−11</span></span>
+                
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">132</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 100%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">143</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                      <div style="height: 100%; width: 92%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 4px;"></div>
+                    
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">132</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">Churn</span></div>
+                
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(220, 38, 38); background: rgb(253, 234, 234); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+2 pts</span></span>
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">9 %</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 78%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">7 %</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                    
+                      <div style="height: 100%; width: 100%; background: linear-gradient(90deg, rgb(251, 113, 133), rgb(225, 29, 72)); border-radius: 4px;"></div>
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">9 %</span></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 16px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+                <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(107, 118, 137); line-height: 1.3;"><span class="sc-interp">NPS</span></div>
+                
+                  <span style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+8 pts</span></span>
+                
+                
+              </div>
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1; margin-top: 9px;"><span class="sc-interp">62</span></div>
+              <div style="margin-top: 13px; display: flex; flex-direction: column; gap: 7px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(163, 172, 192);">n-1</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    <div style="height: 100%; width: 87%; background: rgb(203, 213, 225); border-radius: 4px;"></div>
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; color: rgb(107, 118, 137);"><span class="sc-interp">54</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="flex: 0 0 auto; width: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(71, 85, 105);">Act.</span>
+                  <div style="flex: 1 1 0%; height: 6px; border-radius: 4px; background: rgb(238, 241, 246); overflow: hidden;">
+                    
+                      <div style="height: 100%; width: 100%; background: linear-gradient(90deg, rgb(96, 165, 250), rgb(37, 99, 235)); border-radius: 4px;"></div>
+                    
+                    
+                  </div>
+                  <span style="flex: 0 0 auto; width: 46px; text-align: right; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 700; color: rgb(15, 23, 42);"><span class="sc-interp">62</span></span>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+
+    
+    <div style="margin-top: 30px;">
+      <h2 style="display: flex; align-items: center; gap: 10px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.015em; margin: 0px 0px 14px;"><span style="width: 4px; height: 19px; border-radius: 2px; background: rgb(217, 119, 6);"></span>Efficacité &amp; performance</h2>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+        
+          <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 18px 20px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(107, 118, 137); margin-bottom: 12px;"><span class="sc-interp">Mean time to repair</span></div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1;"><span class="sc-interp">3 jours</span></div>
+              
+                <span style="display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px; flex: 0 0 auto;"><span style="font-size: 8px;"><span class="sc-interp">▼</span></span><span class="sc-interp">−0,2 j</span></span>
+              
+              
+            </div>
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; color: rgb(163, 172, 192); margin-top: 8px;">vs <span class="sc-interp">3,2 j</span> · semestre n-1</div>
+          </div>
+        
+          <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 18px 20px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(107, 118, 137); margin-bottom: 12px;"><span class="sc-interp">A2I (bugs ouverts)</span></div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1;"><span class="sc-interp">19</span></div>
+              
+              
+                <span style="display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(220, 38, 38); background: rgb(253, 234, 234); padding: 3px 9px; border-radius: 999px; flex: 0 0 auto;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+6</span></span>
+              
+            </div>
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; color: rgb(163, 172, 192); margin-top: 8px;">vs <span class="sc-interp">13</span> · semestre n-1</div>
+          </div>
+        
+          <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 18px 20px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(107, 118, 137); margin-bottom: 12px;"><span class="sc-interp">Cycle time</span></div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1;"><span class="sc-interp">2,2 jours</span></div>
+              
+              
+                <span style="display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(220, 38, 38); background: rgb(253, 234, 234); padding: 3px 9px; border-radius: 999px; flex: 0 0 auto;"><span style="font-size: 8px;"><span class="sc-interp">▲</span></span><span class="sc-interp">+0,1 j</span></span>
+              
+            </div>
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; color: rgb(163, 172, 192); margin-top: 8px;">vs <span class="sc-interp">2,1 j</span> · semestre n-1</div>
+          </div>
+        
+          <div class="scp2" style="background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 18px 20px; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 12px 26px -22px; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(107, 118, 137); margin-bottom: 12px;"><span class="sc-interp">Time to market</span></div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+              <div style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: rgb(15, 23, 42); line-height: 1;"><span class="sc-interp">4 mois</span></div>
+              
+                <span style="display: inline-flex; align-items: center; gap: 4px; font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 12px; font-weight: 700; color: rgb(22, 163, 74); background: rgb(231, 246, 236); padding: 3px 9px; border-radius: 999px; flex: 0 0 auto;"><span style="font-size: 8px;"><span class="sc-interp">▼</span></span><span class="sc-interp">−0,4 mois</span></span>
+              
+              
+            </div>
+            <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; color: rgb(163, 172, 192); margin-top: 8px;">vs <span class="sc-interp">4,4 mois</span> · semestre n-1</div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 14px; justify-content: space-between; align-items: stretch; margin-top: 44px; flex-wrap: wrap;">
+      <a href="kakemphaton-scrum-kanban.html" class="scp3" style="flex: 1 1 0%; min-width: 220px; display: flex; align-items: center; gap: 13px; background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 18px; text-decoration: none; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 14px 30px -24px; transition: transform 0.2s, box-shadow 0.2s;"><span style="font-size: 20px; color: rgb(37, 99, 235); font-weight: 700; line-height: 1;">←</span><span style="display: flex; flex-direction: column; gap: 2px; min-width: 0px;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(107, 118, 137);">Précédent</span><span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 15px; font-weight: 700; color: rgb(15, 23, 42);">Sprint board</span></span></a>
+      <a href="kakemphaton-app-refonte.html" class="scp3" style="flex: 1 1 0%; min-width: 220px; display: flex; align-items: center; gap: 13px; justify-content: flex-end; text-align: right; background: rgb(255, 255, 255); border: 1px solid rgba(18, 32, 84, 0.07); border-radius: 14px; padding: 15px 18px; text-decoration: none; box-shadow: rgba(16, 30, 60, 0.03) 0px 1px 2px, rgba(16, 30, 60, 0.14) 0px 14px 30px -24px; transition: transform 0.2s, box-shadow 0.2s;"><span style="display: flex; flex-direction: column; gap: 2px; min-width: 0px; align-items: flex-end;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(107, 118, 137);">Suivant</span><span style="font-family: &quot;Schibsted Grotesk&quot;, sans-serif; font-size: 15px; font-weight: 700; color: rgb(15, 23, 42);">Refonte de l'application</span></span><span style="font-size: 20px; color: rgb(37, 99, 235); font-weight: 700; line-height: 1;">→</span></a>
+    </div>
+
+    <div style="margin-top: 30px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; color: rgb(163, 172, 192); text-align: center;">Exercice de conception — produit et données fictifs, à visée démonstrative.</div>
+
+  </div></div></div></div>
+
+
+
+</body></html>
