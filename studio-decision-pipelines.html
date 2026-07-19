@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/fonts/fonts.css">
+<title>Studio Décision — Pipelines de données — Olivier Guitton</title>
+<meta name="description" content="Pipelines de données — Nettoyer, modéliser et transformer visuellement — sans écrire de code.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.olivierguitton.com/studio-decision-pipelines.html">
+<meta property="og:type" content="website"><meta property="og:url" content="https://www.olivierguitton.com/studio-decision-pipelines.html"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="Olivier Guitton"><meta property="og:title" content="Studio Décision — Pipelines de données"><meta property="og:description" content="Nettoyer, modéliser et transformer visuellement — sans écrire de code.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%23a55a37'/%3E%3Cg%20fill='%23fff'%3E%3Crect%20x='5'%20y='16'%20width='5'%20height='11'%20rx='1.5'/%3E%3Crect%20x='13.5'%20y='10'%20width='5'%20height='17'%20rx='1.5'/%3E%3Crect%20x='22'%20y='5'%20width='5'%20height='22'%20rx='1.5'%20fill='%23f4d9c9'/%3E%3C/g%3E%3C/svg%3E">
+<script>
+(function(){if(window.__kbnav)return;window.__kbnav=1;document.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;var t=((e.target&&e.target.tagName)||'').toLowerCase();if(t==='input'||t==='textarea'||t==='select'||(e.target&&e.target.isContentEditable))return;var nav=document.querySelector('[data-knav]');if(!nav)return;var p=null,n=null;nav.querySelectorAll('a').forEach(function(a){var x=(a.textContent||'').trim();if(x==='\u2039')p=a;if(x==='\u203a')n=a;});var g=e.key==='ArrowLeft'?p:n;if(g){var h=g.getAttribute('href');if(h)location.href=h;}});})();
+</script>
+<style>
+@media print { @page { margin:0.5cm; } section,article,figure,table{break-inside:avoid;} *,::before,::after{print-color-adjust:exact; backdrop-filter:none !important; transition-duration:0s !important;} }
+.scp0:hover{transform:translateY(-2px); box-shadow:rgba(60,45,30,0.04) 0px 1px 2px, rgba(60,45,30,0.24) 0px 20px 38px -24px;}
+*{box-sizing:border-box;}
+a{color:inherit;}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:rgb(165,90,55) solid 3px; outline-offset:2px; border-radius:4px;}
+body{margin:0; background:rgb(247,243,236);}
+@media (max-width:860px){ .wrap{padding:24px 15px 56px !important;} h1{font-size:30px !important;} .g4,.g3,.g2,.spot{grid-template-columns:1fr !important;} [data-knav]{position:static !important;} }
+</style>
+</head>
+<body>
+<div style="background:radial-gradient(1200px 680px at 88% -12%, rgb(244,227,214) 0%, rgb(249,242,234) 46%, rgb(247,243,236) 78%); min-height:100vh; font-family:'Hanken Grotesk',sans-serif; -webkit-font-smoothing:antialiased; color:rgb(58,50,38);">
+  <div class="wrap" data-screen-label="Pipelines de données" style="max-width:1080px; margin:0 auto; padding:54px 40px 80px;">
+    <div data-knav="1" style="position:sticky; top:14px; z-index:60; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); border:1px solid rgba(60,45,30,0.1); border-radius:14px; padding:10px 14px; margin-bottom:34px; box-shadow:rgba(60,45,30,0.16) 0px 8px 24px -14px;">
+      <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+        <a href="index.html" style="display:flex; align-items:center; gap:9px; text-decoration:none;"><span style="width:30px;height:30px;border-radius:9px;background:rgb(165,90,55);display:flex;align-items:center;justify-content:center;flex:none;"><svg viewBox="0 0 24 24" width="17" height="17" fill="none"><rect x="3.5" y="12" width="4" height="8" rx="1.2" fill="#fff"/><rect x="10" y="7" width="4" height="13" rx="1.2" fill="#fff"/><rect x="16.5" y="4" width="4" height="16" rx="1.2" fill="#f4d9c9"/></svg></span><span style="font-family:'Schibsted Grotesk',sans-serif; font-size:15px; font-weight:700; letter-spacing:-0.01em; color:rgb(58,50,38);">Studio Décision</span></a>
+        <span style="color:rgb(200,190,175); font-size:14px;">/</span>
+        <a href="studio-decision-etude-de-cas.html" style="font-family:'Schibsted Grotesk',sans-serif; font-size:14px; font-weight:600; color:rgb(165,90,55); text-decoration:none; white-space:nowrap;">Vue d'ensemble</a>
+        <span style="color:rgb(200,190,175); font-size:14px;">/</span>
+        <span style="font-family:'Schibsted Grotesk',sans-serif; font-size:14px; font-weight:600; color:rgb(125,114,96); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Pipelines de données</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <a href="index.html#studio-decision" style="font-family:'Schibsted Grotesk',sans-serif; font-size:13px; font-weight:600; color:rgb(165,90,55); text-decoration:none; padding:8px 14px; border-radius:9px; border:1px solid rgb(228,214,201); background:rgb(255,255,255); white-space:nowrap;">← Retour au CV</a>
+        <div style="display:flex; align-items:center; gap:5px; background:rgb(249,244,238); border:1px solid rgba(165,90,55,0.12); border-radius:9px; padding:3px;">
+          <a href="studio-decision-import.html" title="Import & profilage" style="display:flex; align-items:center; justify-content:center; width:30px; height:28px; border-radius:7px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); color:rgb(165,90,55); text-decoration:none; font-size:16px; font-weight:700;">‹</a>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:rgb(125,114,96); padding:0 6px; white-space:nowrap;">2 / 9</span>
+          <a href="studio-decision-dashboards.html" title="Dashboards interactifs" style="display:flex; align-items:center; justify-content:center; width:30px; height:28px; border-radius:7px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); color:rgb(165,90,55); text-decoration:none; font-size:16px; font-weight:700;">›</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:inline-flex; align-items:center; gap:8px; background:rgb(255,255,255); border:1px solid rgba(60,45,30,0.1); color:rgb(165,90,55); font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; padding:7px 13px; border-radius:999px; margin-bottom:20px;">Studio Décision · Transformation</div>
+    <h1 style="font-family:'Schibsted Grotesk',sans-serif; font-weight:800; font-size:44px; letter-spacing:-0.03em; line-height:1.04; margin:0 0 14px;">Pipelines de données</h1>
+    <p style="font-size:19px; line-height:1.5; color:rgb(90,80,66); max-width:720px; margin:0 0 22px; text-wrap:pretty;">Nettoyer, modéliser et transformer visuellement — sans écrire de code.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:9px; margin-bottom:36px;">
+      <span style="font-size:12.5px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.16); color:rgb(90,80,66); padding:7px 13px; border-radius:999px;">Nettoyage</span>
+      <span style="font-size:12.5px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.16); color:rgb(90,80,66); padding:7px 13px; border-radius:999px;">Jointures</span>
+      <span style="font-size:12.5px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.16); color:rgb(90,80,66); padding:7px 13px; border-radius:999px;">Agrégations</span>
+      <span style="font-size:12.5px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.16); color:rgb(90,80,66); padding:7px 13px; border-radius:999px;">Champs calculés</span>
+      <span style="font-size:12.5px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.16); color:rgb(90,80,66); padding:7px 13px; border-radius:999px;">Rejouable</span>
+    </div>
+    <div style="border-radius:20px; overflow:hidden; height:420px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.2) 0px 26px 56px -30px; margin-bottom:44px;">
+      <image-slot id="sd-pipelines-page" shape="rect" style="width:100%;height:100%" fit="cover" placeholder="Capture — Pipelines de données"></image-slot>
+    </div>
+    <div style="display:flex; align-items:center; gap:11px; margin:0 0 14px;"><span style="width:5px; height:22px; border-radius:3px; background:rgb(165,90,55);"></span><h2 style="font-family:'Schibsted Grotesk',sans-serif; font-weight:700; font-size:24px; letter-spacing:-0.02em; margin:0;">Comment ça marche</h2></div>
+    <p style="font-size:16px; color:rgb(90,80,66); line-height:1.6; max-width:760px; margin:0 0 22px;">Chaque jeu de données passe par un pipeline d'étapes réutilisables. Vous construisez la transformation une fois, elle se rejoue automatiquement à chaque nouvel import.</p>
+    <div class="g4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:48px;">
+      <div style="background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:11px;">01 · Étapes visuelles</div><div style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55;">Empilez des étapes — filtrer, renommer, dédupliquer, pivoter — dans un enchaînement lisible de haut en bas.</div></div>
+      <div style="background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:11px;">02 · Jointures</div><div style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55;">Combinez plusieurs sources par clés, avec jointures internes/externes et contrôle des doublons.</div></div>
+      <div style="background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:11px;">03 · Champs calculés</div><div style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55;">Créez des colonnes dérivées via une expression, avec aperçu instantané du résultat.</div></div>
+      <div style="background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:11px;">04 · Reproductibilité</div><div style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55;">Le pipeline est versionné et rejoué à l'identique : la donnée reste fiable dans le temps.</div></div>
+    </div>
+    <div style="display:flex; align-items:center; gap:11px; margin:0 0 18px;"><span style="width:5px; height:22px; border-radius:3px; background:rgb(165,90,55);"></span><h2 style="font-family:'Schibsted Grotesk',sans-serif; font-weight:700; font-size:24px; letter-spacing:-0.02em; margin:0;">Points clés</h2></div>
+    <div style="background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:18px; padding:26px 28px; margin-bottom:48px; display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 16px 34px -26px;">
+      <div style="display:flex; gap:9px; align-items:flex-start; font-size:14px; color:rgb(70,62,50);"><span style="color:rgb(81,151,115); font-weight:800;">✓</span><span>Transformation 100 % visuelle</span></div>
+      <div style="display:flex; gap:9px; align-items:flex-start; font-size:14px; color:rgb(70,62,50);"><span style="color:rgb(81,151,115); font-weight:800;">✓</span><span>Jointures multi-sources</span></div>
+      <div style="display:flex; gap:9px; align-items:flex-start; font-size:14px; color:rgb(70,62,50);"><span style="color:rgb(81,151,115); font-weight:800;">✓</span><span>Colonnes dérivées calculées</span></div>
+      <div style="display:flex; gap:9px; align-items:flex-start; font-size:14px; color:rgb(70,62,50);"><span style="color:rgb(81,151,115); font-weight:800;">✓</span><span>Rejeu automatique à chaque import</span></div>
+    </div>
+    <div style="display:flex; gap:14px; justify-content:space-between; align-items:stretch; flex-wrap:wrap; margin-bottom:30px;">
+      <a href="studio-decision-import.html" class="scp0" style="flex:1 1 0; min-width:220px; display:flex; align-items:center; gap:13px; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:14px; padding:15px 18px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;"><span style="font-size:20px; color:rgb(165,90,55); font-weight:700; line-height:1;">←</span><span style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:rgb(125,114,96);">Précédent</span><span style="font-family:'Schibsted Grotesk',sans-serif; font-size:15px; font-weight:700; color:rgb(58,50,38);">Import & profilage</span></span></a>
+      <a href="studio-decision-dashboards.html" class="scp0" style="flex:1 1 0; min-width:220px; display:flex; align-items:center; gap:13px; justify-content:flex-end; text-align:right; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:14px; padding:15px 18px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;"><span style="display:flex; flex-direction:column; gap:2px; min-width:0; align-items:flex-end;"><span style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:rgb(125,114,96);">Suivant</span><span style="font-family:'Schibsted Grotesk',sans-serif; font-size:15px; font-weight:700; color:rgb(58,50,38);">Dashboards interactifs</span></span><span style="font-size:20px; color:rgb(165,90,55); font-weight:700; line-height:1;">→</span></a>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; color:rgb(170,158,140); text-align:center;">Studio Décision — produit réel, conçu et développé par Olivier Guitton.</div>
+  </div>
+</div>
+<script src="image-slot.js"></script>
+</body></html>
