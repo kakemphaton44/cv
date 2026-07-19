@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/fonts/fonts.css">
+<title>Studio Décision — Étude de cas produit réel · conçu & développé — Olivier Guitton</title>
+<meta name="description" content="Studio Décision (DataViz Studio) : un Decision Intelligence Workspace conçu et développé de A à Z — dashboards, pipelines de données, décisions tracées et assistant IA. React, TypeScript, Node & PostgreSQL.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.olivierguitton.com/studio-decision-etude-de-cas.html">
+<meta property="og:type" content="website"><meta property="og:url" content="https://www.olivierguitton.com/studio-decision-etude-de-cas.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Olivier Guitton">
+<meta property="og:title" content="Studio Décision — Étude de cas produit réel — Olivier Guitton">
+<meta property="og:description" content="Un Decision Intelligence Workspace conçu et développé de bout en bout : dashboards, pipelines, décisions tracées, assistant IA.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%23a55a37'/%3E%3Cg%20fill='%23fff'%3E%3Crect%20x='5'%20y='16'%20width='5'%20height='11'%20rx='1.5'/%3E%3Crect%20x='13.5'%20y='10'%20width='5'%20height='17'%20rx='1.5'/%3E%3Crect%20x='22'%20y='5'%20width='5'%20height='22'%20rx='1.5'%20fill='%23f4d9c9'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+@media print {
+  @page { margin: 0.5cm; }
+  section, article, figure, table { break-inside: avoid; }
+  *, ::before, ::after { print-color-adjust: exact; backdrop-filter: none !important; transition-duration: 0s !important; }
+}
+.scp0:hover { transform: translateY(-2px); box-shadow: rgba(165, 90, 55, 0.5) 0px 16px 30px -12px; }
+.scp1:hover { background: rgb(250, 246, 240); }
+.card:hover { transform: translateY(-4px); box-shadow: 0 22px 46px -26px rgba(60,45,30,.4); }
+* { box-sizing: border-box; }
+a:focus-visible, button:focus-visible { outline: rgb(165,90,55) solid 3px; outline-offset: 2px; border-radius: 4px; }
+body { margin: 0px; background: rgb(247, 243, 236); }
+a { color: inherit; }
+@media (max-width: 860px) {
+  .wrap { padding: 24px 15px 56px !important; }
+  h1 { font-size: 40px !important; }
+  .g3, .g2, .spot { grid-template-columns: 1fr !important; }
+  .spot.rev > div:first-child { order: 2 !important; }
+  [data-knav] { position: static !important; }
+}
+</style>
+</head>
+<body>
+<div style="background: radial-gradient(1200px 680px at 88% -12%, rgb(244, 227, 214) 0%, rgb(249, 242, 234) 46%, rgb(247, 243, 236) 78%); min-height: 100vh; font-family: 'Hanken Grotesk', sans-serif; -webkit-font-smoothing: antialiased; color: rgb(58, 50, 38);">
+  <div class="wrap" style="max-width: 1080px; margin: 0 auto; padding: 54px 40px 80px;">
+
+    <!-- breadcrumb nav -->
+    <div data-knav="1" style="position: sticky; top: 14px; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border: 1px solid rgba(60,45,30,0.1); border-radius: 14px; padding: 10px 14px; margin-bottom: 34px; box-shadow: rgba(60,45,30,0.16) 0px 8px 24px -14px;">
+      <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+        <a href="index.html" style="display: flex; align-items: center; gap: 9px; text-decoration: none;">
+          <span style="width: 30px; height: 30px; border-radius: 9px; background: rgb(165,90,55); display: flex; align-items: center; justify-content: center; flex: 0 0 auto;"><svg viewBox="0 0 24 24" width="17" height="17" fill="none"><rect x="3.5" y="12" width="4" height="8" rx="1.2" fill="#fff"/><rect x="10" y="7" width="4" height="13" rx="1.2" fill="#fff"/><rect x="16.5" y="4" width="4" height="16" rx="1.2" fill="#f4d9c9"/></svg></span>
+          <span style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: rgb(58,50,38);">Studio Décision</span>
+        </a>
+        <span style="color: rgb(200,190,175); font-size: 14px;">/</span>
+        <span style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(125,114,96); white-space: nowrap;">Étude de cas</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <a href="index.html" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: rgb(165,90,55); text-decoration: none; padding: 8px 14px; border-radius: 9px; border: 1px solid rgb(228,214,201); background: rgb(255,255,255); white-space: nowrap;">← Retour au CV</a>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: rgb(125,114,96); background: rgb(249,244,238); border: 1px solid rgba(165,90,55,0.16); padding: 7px 12px; border-radius: 9px; white-space: nowrap;">Produit réel · full-stack</span>
+      </div>
+    </div>
+
+    <!-- hero -->
+    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255,255,255); border: 1px solid rgba(60,45,30,0.1); color: rgb(165,90,55); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 7px 13px; border-radius: 999px; margin-bottom: 22px; box-shadow: rgba(60,45,30,0.05) 0px 1px 2px;">Étude de cas · produit réel</div>
+    <h1 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 56px; letter-spacing: -0.03em; line-height: 1.02; margin: 0 0 18px;">Studio Décision</h1>
+    <p style="font-size: 20px; line-height: 1.5; color: rgb(90,80,66); max-width: 760px; margin: 0 0 30px; text-wrap: pretty;">Un <span style="color: rgb(58,50,38); font-weight: 600;">Decision Intelligence Workspace</span> que j'ai imaginé, conçu <span style="color: rgb(58,50,38); font-weight: 600;">et développé de bout en bout</span> : de la donnée brute au dashboard, du dashboard à la décision tracée, jusqu'au suivi de son impact — dans un seul espace.</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px;">
+      <a href="index.html#studio-decision" class="scp0" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(165,90,55); color: rgb(255,255,255); font-family: 'Schibsted Grotesk', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 24px; border-radius: 12px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;">Voir la section sur le CV →</a>
+      <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255,255,255); color: rgb(58,50,38); font-family: 'Schibsted Grotesk', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 24px; border-radius: 12px; text-decoration: none; border: 1.5px solid rgb(228,214,201);">← Revenir au CV</a>
+    </div>
+
+    <!-- context cards -->
+    <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px;">
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 22px 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(165,90,55); margin-bottom: 11px;">Le problème</div>
+        <div style="font-size: 14px; color: rgb(90,80,66); line-height: 1.55;">Trop d'outils pour décider : tableur pour la donnée, BI pour les graphiques, slides pour convaincre, notes éparses pour tracer le choix. Le fil se perd entre le chiffre et la décision.</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 22px 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(165,90,55); margin-bottom: 11px;">Mon rôle</div>
+        <div style="font-size: 14px; color: rgb(90,80,66); line-height: 1.55;">Product, design <em>et</em> développement — de A à Z. Cadrage produit, design system, front React/TS, back Node/PostgreSQL, intégration IA.</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 22px 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(165,90,55); margin-bottom: 11px;">Ce que ça démontre</div>
+        <div style="font-size: 14px; color: rgb(90,80,66); line-height: 1.55;">Un profil produit capable de penser un produit complet <em>et</em> de le construire réellement — pas seulement de le spécifier.</div>
+      </div>
+    </div>
+
+    <!-- meta chips -->
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 44px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: rgb(125,114,96);">
+      <span style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); padding: 6px 11px; border-radius: 8px;">Produit réel</span>
+      <span style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); padding: 6px 11px; border-radius: 8px;">React · TypeScript</span>
+      <span style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); padding: 6px 11px; border-radius: 8px;">Node · PostgreSQL</span>
+      <span style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); padding: 6px 11px; border-radius: 8px;">Assistant IA · RAG</span>
+      <span style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); padding: 6px 11px; border-radius: 8px;">i18n FR · EN</span>
+    </div>
+
+    <!-- hero screenshot -->
+    <div style="border-radius: 20px; overflow: hidden; height: 460px; background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.2) 0px 26px 56px -30px; margin-bottom: 56px;">
+      <image-slot id="sd-case-hero" shape="rect" style="width:100%;height:100%" fit="cover" placeholder="Capture principale — l'écran d'accueil / dashboard de Studio Décision"></image-slot>
+    </div>
+
+    <!-- chiffres band -->
+    <div style="display: flex; align-items: center; gap: 11px; margin: 0 0 18px;"><span style="width: 5px; height: 22px; border-radius: 3px; background: rgb(165,90,55);"></span><h2 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; margin: 0;">En chiffres</h2></div>
+    <div class="g2" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 56px;">
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 38px; font-weight: 800; color: rgb(165,90,55); line-height: 1;">12 min</div>
+        <div style="font-size: 13.5px; color: rgb(125,114,96); margin-top: 8px; line-height: 1.4;">pour composer un premier dashboard</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 38px; font-weight: 800; color: rgb(165,90,55); line-height: 1;">30+</div>
+        <div style="font-size: 13.5px; color: rgb(125,114,96); margin-top: 8px; line-height: 1.4;">types de graphiques disponibles</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 38px; font-weight: 800; color: rgb(81,151,115); line-height: 1;">−40 %</div>
+        <div style="font-size: 13.5px; color: rgb(125,114,96); margin-top: 8px; line-height: 1.4;">de temps visé sur le reporting</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 38px; font-weight: 800; color: rgb(165,90,55); line-height: 1;">1 espace</div>
+        <div style="font-size: 13.5px; color: rgb(125,114,96); margin-top: 8px; line-height: 1.4;">de la donnée à la décision</div>
+      </div>
+    </div>
+
+    <!-- parcours 3 steps -->
+    <div style="display: flex; align-items: center; gap: 11px; margin: 0 0 18px;"><span style="width: 5px; height: 22px; border-radius: 3px; background: rgb(165,90,55);"></span><h2 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; margin: 0;">Le parcours, en trois temps</h2></div>
+    <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 56px;">
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 24px 26px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 9px; background: rgb(244,225,214); color: rgb(165,90,55); font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 14px;">1</span>
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: rgb(58,50,38); margin-bottom: 6px;">Connectez</div>
+        <div style="font-size: 14px; color: rgb(90,80,66); line-height: 1.55;">Importez CSV/Excel ou branchez PostgreSQL et vos connecteurs en quelques minutes.</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 24px 26px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 9px; background: rgb(244,225,214); color: rgb(165,90,55); font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 14px;">2</span>
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: rgb(58,50,38); margin-bottom: 6px;">Visualisez</div>
+        <div style="font-size: 14px; color: rgb(90,80,66); line-height: 1.55;">Composez dashboards et analyses en glisser-déposer, filtrez et explorez en direct.</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 24px 26px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 9px; background: rgb(244,225,214); color: rgb(165,90,55); font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 14px;">3</span>
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: rgb(58,50,38); margin-bottom: 6px;">Décidez</div>
+        <div style="font-size: 14px; color: rgb(90,80,66); line-height: 1.55;">Documentez la décision, reliez-la à ses données et suivez son impact dans le temps.</div>
+      </div>
+    </div>
+
+    <!-- feature deep-dives -->
+    <div style="display: flex; align-items: center; gap: 11px; margin: 0 0 24px;"><span style="width: 5px; height: 22px; border-radius: 3px; background: rgb(165,90,55);"></span><h2 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; margin: 0;">Ce qui fait la différence</h2></div>
+
+    <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 56px;">
+
+      <div class="spot" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 20px; padding: 28px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 16px 34px -26px;">
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(165,90,55); margin-bottom: 12px;">Dashboards</div>
+          <h3 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; margin: 0 0 12px; color: rgb(58,50,38);">Des tableaux de bord qui parlent business</h3>
+          <p style="font-size: 15px; color: rgb(90,80,66); line-height: 1.6; margin: 0 0 16px;">Composez en glisser-déposer, filtrez en direct et donnez à chaque équipe la vue dont elle a besoin — le tout dans un design chaleureux et lisible.</p>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Plus de 30 types de graphiques et 6 thèmes d'accent</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Filtres, drill-down et champs calculés</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Export PDF / PowerPoint et partage</span></div>
+          </div>
+        </div>
+        <div style="border-radius: 14px; overflow: hidden; height: 280px; background: rgb(247,243,236); border: 1px solid rgba(165,90,55,0.12);">
+          <image-slot id="sd-case-dash" shape="rect" style="width:100%;height:100%" placeholder="Capture — un dashboard composé"></image-slot>
+        </div>
+      </div>
+
+      <div class="spot rev" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 20px; padding: 28px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 16px 34px -26px;">
+        <div style="border-radius: 14px; overflow: hidden; height: 280px; background: rgb(247,243,236); border: 1px solid rgba(165,90,55,0.12);">
+          <image-slot id="sd-case-pipeline" shape="rect" style="width:100%;height:100%" placeholder="Capture — un pipeline de données"></image-slot>
+        </div>
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(165,90,55); margin-bottom: 12px;">Pipelines</div>
+          <h3 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; margin: 0 0 12px; color: rgb(58,50,38);">Nettoyez et transformez, sans une ligne de code</h3>
+          <p style="font-size: 15px; color: rgb(90,80,66); line-height: 1.6; margin: 0 0 16px;">Modélisez vos données étape par étape — source, nettoyage, jointure, agrégation — et rejouez le pipeline à chaque nouvel import.</p>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Étapes visuelles réutilisables</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Profilage et détection des types</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Sources CSV, Excel, PostgreSQL et connecteurs</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spot" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 20px; padding: 28px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 16px 34px -26px;">
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(165,90,55); margin-bottom: 12px;">Décisions</div>
+          <h3 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; margin: 0 0 12px; color: rgb(58,50,38);">La décision, tracée de bout en bout</h3>
+          <p style="font-size: 15px; color: rgb(90,80,66); line-height: 1.6; margin: 0 0 16px;">Reliez chaque choix à ses données, ses arbitrages et son résultat — et gardez tout l'historique, du « proposé » à l'« impact suivi ».</p>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Timeline et arbre de décision</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Approbations, rôles et journal d'audit</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Suivi du ROI et de l'outcome dans le temps</span></div>
+          </div>
+        </div>
+        <div style="border-radius: 14px; overflow: hidden; height: 280px; background: rgb(247,243,236); border: 1px solid rgba(165,90,55,0.12);">
+          <image-slot id="sd-case-decision" shape="rect" style="width:100%;height:100%" placeholder="Capture — timeline / arbre de décision"></image-slot>
+        </div>
+      </div>
+
+      <div class="spot rev" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 20px; padding: 28px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 16px 34px -26px;">
+        <div style="border-radius: 14px; overflow: hidden; height: 280px; background: rgb(247,243,236); border: 1px solid rgba(165,90,55,0.12);">
+          <image-slot id="sd-case-ai" shape="rect" style="width:100%;height:100%" placeholder="Capture — assistant IA / chat sur les données"></image-slot>
+        </div>
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(165,90,55); margin-bottom: 12px;">Assistant IA</div>
+          <h3 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; margin: 0 0 12px; color: rgb(58,50,38);">Interrogez vos données en langage naturel</h3>
+          <p style="font-size: 15px; color: rgb(90,80,66); line-height: 1.6; margin: 0 0 16px;">Un assistant appuyé sur un index RAG de vos données et artefacts : posez la question, obtenez une réponse sourcée, remontez à la donnée.</p>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Questions en langage naturel</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Réponses sourcées, reliées aux données</span></div>
+            <div style="display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: rgb(70,62,50);"><span style="color: rgb(81,151,115); font-weight: 800;">✓</span><span>Recommandations d'aide à la décision</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- sous le capot -->
+    <div style="display: flex; align-items: center; gap: 11px; margin: 0 0 18px;"><span style="width: 5px; height: 22px; border-radius: 3px; background: rgb(165,90,55);"></span><h2 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; margin: 0;">Sous le capot</h2></div>
+    <p style="font-size: 15px; color: rgb(90,80,66); line-height: 1.6; max-width: 720px; margin: 0 0 20px;">Studio Décision est une vraie application, pensée pour tenir dans le temps : front typé, back événementiel, résilience hors-ligne et internationalisation.</p>
+    <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 56px;">
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 22px 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: rgb(58,50,38); margin-bottom: 8px;">Front</div>
+        <div style="font-size: 13.5px; color: rgb(90,80,66); line-height: 1.55;">React + TypeScript, Vite, design system maison (Plus Jakarta / DM Sans), lucide-react, 6 thèmes d'accent.</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 22px 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: rgb(58,50,38); margin-bottom: 8px;">Back &amp; données</div>
+        <div style="font-size: 13.5px; color: rgb(90,80,66); line-height: 1.55;">Node & PostgreSQL, stockage jsonb, event store et projections, fallback localStorage et sync hors-ligne.</div>
+      </div>
+      <div style="background: rgb(255,255,255); border: 1px solid rgba(165,90,55,0.14); border-radius: 16px; padding: 22px 24px; box-shadow: rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px;">
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: rgb(58,50,38); margin-bottom: 8px;">IA &amp; i18n</div>
+        <div style="font-size: 13.5px; color: rgb(90,80,66); line-height: 1.55;">Indexeur et assistant RAG, recommandations, permissions par ressource, interface FR / EN.</div>
+      </div>
+    </div>
+
+    <!-- explorer en détail -->
+    <div style="display: flex; align-items: center; gap: 11px; margin: 0 0 8px;"><span style="width: 5px; height: 22px; border-radius: 3px; background: rgb(165,90,55);"></span><h2 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; margin: 0;">Explorer en détail</h2></div>
+    <p style="font-size: 15px; color: rgb(90,80,66); line-height: 1.6; max-width: 720px; margin: 0 0 20px;">Chacune des briques du produit a sa page dédiée — les mêmes éléments que sur le CV, avec le détail complet.</p>
+    <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 56px;">
+      <a href="studio-decision-import.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Données</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Import & profilage</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">CSV, Excel, PostgreSQL et connecteurs — profilage et typage automatiques dès l'import.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-pipelines.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Transformation</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Pipelines de données</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">Nettoyer, joindre et transformer visuellement, rejouable à chaque nouvel import.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-dashboards.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Visualisation</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Dashboards interactifs</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">30+ graphiques, glisser-déposer, filtres croisés et drill-down en un clic.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-decisions.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Pilotage</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Décisions tracées</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">Timeline, arbre de décision, approbations et audit — reliés aux données.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-impact.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Impact</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Suivi de l'impact</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">Relier chaque décision à son résultat réel et suivre le ROI dans le temps.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-presentations.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Partage</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Présentations & export</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">Transformer un dashboard en présentation exportable en PDF ou PowerPoint.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-assistant-ia.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">IA</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Assistant IA & RAG</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">Interroger ses données en langage naturel, avec des réponses sourcées.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-architecture.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Ingénierie</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Architecture full-stack</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">React + TypeScript, Node & PostgreSQL, event store et sync hors-ligne.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+      <a href="studio-decision-design-system.html" class="card scp1" style="display:flex; flex-direction:column; background:rgb(255,255,255); border:1px solid rgba(165,90,55,0.14); border-radius:16px; padding:22px 24px; text-decoration:none; box-shadow:rgba(60,45,30,0.03) 0px 1px 2px, rgba(60,45,30,0.14) 0px 14px 30px -24px; transition:transform .2s, box-shadow .2s;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,90,55); margin-bottom:10px;">Design</div>
+        <div style="font-family:'Schibsted Grotesk',sans-serif; font-size:18px; font-weight:700; color:rgb(58,50,38); letter-spacing:-0.01em; margin-bottom:8px;">Design system « Crème »</div>
+        <p style="font-size:13.5px; color:rgb(90,80,66); line-height:1.55; margin:0 0 16px;">Fond crème, accent terracotta, 6 thèmes, cartes blanches, interface FR/EN.</p>
+        <span style="margin-top:auto; font-family:'Schibsted Grotesk',sans-serif; font-size:13.5px; font-weight:600; color:rgb(165,90,55);">Voir le détail →</span>
+      </a>
+    </div>
+
+    <!-- CTA -->
+    <div style="position: relative; overflow: hidden; background: linear-gradient(135deg, rgb(165,90,55), rgb(122,61,34)); border-radius: 20px; padding: 44px 44px; color: rgb(255,255,255); margin-bottom: 34px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(246,221,205); margin-bottom: 16px;">Product + Design + Dev</div>
+      <h2 style="font-family: 'Schibsted Grotesk', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.02em; line-height: 1.12; margin: 0 0 14px; max-width: 640px;">Concevoir un produit, c'est bien. Le livrer, c'est mieux.</h2>
+      <p style="font-size: 16px; color: rgb(242,221,208); line-height: 1.6; max-width: 560px; margin: 0 0 26px;">Studio Décision est ma démonstration : de la vision produit jusqu'au code en production. Discutons de ce que je peux apporter à votre équipe.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="mailto:olivier.guitton@outlook.com?subject=Studio%20D%C3%A9cision" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255,255,255); color: rgb(122,61,34); font-family: 'Schibsted Grotesk', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; border-radius: 12px; text-decoration: none;">Me contacter ↗</a>
+        <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.14); color: rgb(255,255,255); font-family: 'Schibsted Grotesk', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 26px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.3);">← Retour au CV</a>
+      </div>
+    </div>
+
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: rgb(170,158,140); text-align: center;">Studio Décision (DataViz Studio) — produit réel, conçu et développé par Olivier Guitton.</div>
+
+  </div>
+</div>
+<script src="image-slot.js"></script>
+</body></html>

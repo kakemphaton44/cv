@@ -2,8 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.olivierguitton.com/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-etude-de-cas.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-import.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-pipelines.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-dashboards.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-decisions.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-impact.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-presentations.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-assistant-ia.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-architecture.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.olivierguitton.com/studio-decision-design-system.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.olivierguitton.com/product-management-big-picture.html</loc>
